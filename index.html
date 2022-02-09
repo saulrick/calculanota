@@ -22,7 +22,7 @@ margin-left: 0px;
 margin right: 0px;
 margin-top: 30px;
 background: #E6E6FA;
-font-family: Tahoma;
+font-family: Times new roman;
 
 }
 
@@ -32,10 +32,10 @@ text-align: center;
 }
 
 #boton {
-width: 12%;
+width: 15%;
 color:black;
 background-color: #ADD8E6;
-height:20%;
+height:25%;
 font-size:16px;
 
 }
@@ -52,9 +52,9 @@ font-size:16px;
 }
 input {
 	box-sizing: border-box;
-	width: 18%;
+	width: 20%;
 	padding: 0.8em;
-	border: 0.7em solid #808080;
+	border: 0.2em solid #808080;
 	border-radius: 2.8em;
 	text-align: center;
 }
@@ -74,25 +74,58 @@ input {
 
 </style>
 <body>
+
+
+
+
+
+
 <div class="cont" align="center">
-<h1>Calcula tu nota 1</h1>
-<h6>Recuerda que el primer corte corresponde al 30% de tu nota final</h6>
- <input type="text" id="t1" class="subcont" placeholder= "Nota del trabajo 1-10%"/> 
+<h1>Calcula tu nota / Corte </h1>
+Recuerda que el primer corte corresponde al 30%de tu nota final <br>
+Recuerda que el segundo corte corresponde al 30% de tu nota final<br>
+Recuerda que el tercer corte corresponde al 40% de tu nota final <br>
+<br>
+<br>
+Los talleres son 2 por corte y corresponden al 20%, el quiz un 10%
+<br> <br> <br>
+ <input type="text" id="t1" class="subcont" placeholder  = "Nota del taller - 10%" /> 
  <br>
- <input type="text" id="t2" class="subcont" placeholder= "Nota del trabajo 2 - 10%"/> 
+ <input type="text" id="t2" class="subcont" placeholder= "Nota del taller - 10%"/> 
  <br>
  <input type="text" id="t3" class="subcont" placeholder= "Quiz -10%"/> 
- <br>
- <input type="text" id="t4" class="subcont" placeholder= "Nota del trabajo 3 - 30%"/> 
- <br>
- <input type="text" id="t5" class="subcont" placeholder= "Parcial 1 -70%"/>
- <br>
- <h2>Resultado primer corte</h2>
- <div>
- <button id="boton" onclick="Calcular()">Calcular</button> 
  
-<p id="suma"></p>
+ <div>
+ <br>
+ <br>
+ <br>
+ La nota del parcial corresponde al 70% dividido asi:
+ <br>
+ <br>
+ <input type="text" id="t4" class="subcont" placeholder= "Nota del trabajo del semestre - 30%"/> <input type="text" id="t5" class="subcont" placeholder= "Parcial -70%"/>
+ <br>
+<br>
+ 
+ </div>
+
+ <div>
+ 
+  <button id="boton" onclick="Calcular()">Calcular</button> <br>
+  
+  <h2>Resultado del corte: </h2><h1 style="background-color:powderblue;" id="suma" </h1>
+  
+
+
 </body>
+</div>
+
+
+<div>
+<br>
+<br>
+<br>
+Post-doc., S. Rick Fernández 
+<br>Shanghai University, China<br>
 </div>
 
 <script> 
@@ -105,11 +138,22 @@ var vr3 = document.getElementById('t3').value;
 var vr4 = document.getElementById('t4').value; 
 var vr5 = document.getElementById('t5').value; 
 var p = (parseFloat(((parseFloat(vr1*10/100)+(+vr2*10/100))+parseFloat(vr3*10/100)+(parseFloat(vr4*30/100)+parseFloat(vr5*70/100))*70/100))); document.getElementById('suma').innerHTML = p;
-
 }
+ 
+
+
+
+
+
+
+
+
+
+
 
 
 </script>
 
 </html>
+
 
