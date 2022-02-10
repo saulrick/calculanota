@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 
+
+
+
 <style>
 
 <meta name="viewport" content="
@@ -9,8 +12,7 @@
 	initial-scale = float,
 	minimum-scale = float,
 	maximum-scale = float,
-	user-scalable = [yes | no]
-">
+	user-scalable = [yes | no]">
 
 
 
@@ -73,14 +75,18 @@ input {
 
 
 </style>
+
+
+
 <body>
 
 
 
 
 
-
 <div class="cont" align="center">
+
+
 <h1>Calcula tu nota / Corte </h1>
 Recuerda que el primer corte corresponde al 30%de tu nota final <br>
 Recuerda que el segundo corte corresponde al 30% de tu nota final<br>
@@ -89,35 +95,51 @@ Recuerda que el tercer corte corresponde al 40% de tu nota final <br>
 <br>
 Los talleres son 2 por corte y corresponden al 20%, el quiz un 10%
 <br> <br> <br>
- <input type="text" id="t1" class="subcont" placeholder  = "Nota del taller - 10%" /> 
+
+
+
+ <input type="number" id="t1" class="subcont" placeholder= "Nota del taller - 10%"  min="0" max="5"/>
  <br>
- <input type="text" id="t2" class="subcont" placeholder= "Nota del taller - 10%"/> 
+ <input type="number" id="t2" class="subcont" placeholder= "Nota del taller - 10%" min="0" max="5"/> 
  <br>
- <input type="text" id="t3" class="subcont" placeholder= "Quiz -10%"/> 
- 
- <div>
+ <input type="number" id="t3" class="subcont" placeholder= "Quiz -10%" min="0" max="5" /> 
  <br>
  <br>
  <br>
  La nota del parcial corresponde al 70% dividido asi:
  <br>
  <br>
- <input type="text" id="t4" class="subcont" placeholder= "Nota del trabajo del semestre - 30%"/> <input type="text" id="t5" class="subcont" placeholder= "Parcial -70%"/>
+ <input type="number" min="0" max="5" id="t4" class="subcont" placeholder= "Trabajo del semestre - 30%" min="0" max="5" /> <input type="number" id="t5" class="subcont" placeholder= "Parcial -70% "min="0" max="5"/>
+
  <br>
 <br>
- 
- </div>
+  
 
  <div>
- 
   <button id="boton" onclick="Calcular()">Calcular</button> <br>
-  
-  <h2>Resultado del corte: </h2><h1 style="background-color:powderblue;" id="suma" </h1>
-  
 
+
+  <h2>Resultado del corte: </h2><h1 style="background-color:powderblue;" id="suma" </h1>
 
 </body>
 </div>
+<br>
+<br>
+<H2>Recuerda que puedes mejorar tu nota con los recursos de la clase</h2>
+
+
+<a title="Investiguemos" href="https://www.youtube.com/channel/UCWa4bjAiK9LvSX1Jj83Hk9g/featured" target="_blank" >
+<img src="https://cdn-icons-png.flaticon.com/512/174/174883.png" alt="Investiguemos" height= 42 align="middle" rel="noopener noreferrer"/></a>
+
+<a title="Guia de la clase" href="https://saulrick.github.io/CONSTRUYEARTICULOS/" target="_blank" >
+<img src="https://img.lovepik.com/element/45004/5115.png_860.png" alt="Guia" height= 42 align="middle" rel="noopener noreferrer"/></a>
+
+
+
+
+
+
+
 
 
 <div>
@@ -127,6 +149,9 @@ Los talleres son 2 por corte y corresponden al 20%, el quiz un 10%
 Post-doc., S. Rick Fernández 
 <br>Shanghai University, China<br>
 </div>
+
+
+
 
 <script> 
 
@@ -146,14 +171,10 @@ var p = (parseFloat(((parseFloat(vr1*10/100)+(+vr2*10/100))+parseFloat(vr3*10/10
 
 
 
-
-
-
-
-
-
 </script>
 
 </html>
+
+
 
 
